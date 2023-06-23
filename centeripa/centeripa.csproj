@@ -13,5 +13,12 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\Doctor\" />
+    <Folder Include="wwwroot\asset\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="wwwroot\asset\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="7.0.8" />
   </ItemGroup>
 </Project>
