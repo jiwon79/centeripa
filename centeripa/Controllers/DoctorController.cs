@@ -4,14 +4,18 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 
-// For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-
 namespace centeripa
 {
     public class DoctorController : Controller
     {
-        // GET: /<controller>/
+        // GET: /Doctor/
         public IActionResult Index()
+        {
+            return View();
+        }
+
+        // GET: /Doctor/Specialist
+        public IActionResult Specialist()
         {
             return View();
         }
