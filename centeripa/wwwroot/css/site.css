@@ -1,4 +1,11 @@
-﻿p {
+﻿/* root */
+:root {
+  /* set color */
+  --main100: rgb(199,236,229);
+  --main400: #68C6B5;
+}
+
+p {
   margin: 0;
 }
 
