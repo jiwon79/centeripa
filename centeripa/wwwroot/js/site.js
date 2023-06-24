@@ -29,7 +29,7 @@ const transformByScroll = () => {
         const isVisible = (elemTop >= 0 && elemTop <= window.innerHeight) || (elemBottom >= 0 && elemBottom <= window.innerHeight);
 
         if(isVisible) {
-            let distanceFromTop = (window.innerHeight - elemTop) / 5;
+            let distanceFromTop = (window.innerHeight - elemTop) / 10;
             el.style.transform = `translateX(${distanceFromTop}px)`;
         }
     });

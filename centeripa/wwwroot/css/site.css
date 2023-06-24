@@ -1,22 +1,23 @@
-﻿html {
-  font-size: 14px;
+﻿p {
+  margin: 0;
 }
 
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
+.slide-in-from-right {
+  animation: 1s ease-out 0s 1 slideInFromRight forwards;
+}
+
+@keyframes slideInFromRight {
+  0% {
+      transform: translateX(-80px);
+      opacity: 0;
   }
-}
 
-.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
-}
+  80% {
+      opacity: 0.5;
+  }
 
-html {
-  position: relative;
-  min-height: 100%;
-}
-
-body {
-  margin-bottom: 60px;
+  100% {
+      transform: translateX(0);
+      opacity: 1;
+  }
 }
