@@ -1,13 +1,11 @@
-﻿// Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
-// for details on configuring this project to bundle and minify static web assets.
-
-// Write your JavaScript code.
-
-const startAnimation = (entries, observer) => {
+﻿const startAnimation = (entries, observer) => {
     entries.forEach(entry => {
-      entry.target.classList.toggle("slide-in-from-right", entry.isIntersecting);
+        if(entry.isIntersecting) {
+            entry.target.classList.add("slide-in-from-right");
+            observer.unobserve(entry.target);
+        }
     });
-  };
+};
   
 const observer = new IntersectionObserver(startAnimation);
 const options = { root: null, rootMargin: '0px', threshold: 1 }; 
