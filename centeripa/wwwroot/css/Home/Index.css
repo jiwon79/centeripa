@@ -144,12 +144,67 @@ h2 {
     top: 0;
     z-index: -1;
     width: 100%;
+    object-fit: cover;
 }
 
-.trasparent-desc__wrap {
-
+.transparent-desc__wrap {
+    padding: 80px 100px 80px 100px;
 }
 
 .transparent-desc__item {
-    
+    width: 40%;
+    color: white;
+
+    &.right {
+        position: relative;
+        left: 50%;
+    }
+
+    > .title {
+        font-size: 38px;
+        line-height: 44px;
+        margin-bottom: 20px;
+    }
+
+    > .desc__big {
+        width: 150px;
+        font-size: 18px;
+        font-weight: lighter;
+    }
+
+    > .underline {
+        width: 50%;
+        height: 1px;
+        background-color: white;
+        margin-bottom: 20px;
+    }
+
+    > .desc__small {
+        width: 50%;
+        font-size: 16px;
+        font-weight: lighter;
+        margin-bottom: 20px;
+    }
+
+    > .link {
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid white;
+        width: 160px;
+        height: 50px;
+        transition: 0.5s;
+
+        > span {
+            font-size: 18px;
+            line-height: 18px;
+            color: white;
+        }
+
+        &:hover {
+            background-color: var(--main400);
+            border: none;
+        }
+    }
 }
