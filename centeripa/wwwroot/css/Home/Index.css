@@ -292,3 +292,52 @@ h2 {
         margin-bottom: 30px;
     }
 }
+
+.news__wrap {
+    background-color: var(--grey100);
+    padding: 100px;
+}
+
+.news__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    > .title__wrap {
+        > .title {
+            font-size: 36px;
+            margin-bottom: 8px;
+        }
+
+        > .desc {
+            font-size: 16px;
+            color: var(--grey600);
+        }
+    }
+
+    > .link {
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid var(--grey800);
+        width: 160px;
+        height: 50px;
+        transition: 0.5s;
+
+        > span {
+            font-size: 18px;
+            line-height: 18px;
+            color: var(--grey800);
+        }
+
+        &:hover {
+            background-color: var(--main400);
+            border: none;
+            
+            > span {
+                color: var(--grey100);
+            }
+        }
+    }
+}
