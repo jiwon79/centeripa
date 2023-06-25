@@ -98,6 +98,7 @@ h2 {
     grid-template-rows: 1fr 50px 1fr;
     width: 100%;
     padding: 50px 100px 50px 100px;;
+    background-color: white;
 
     > .underline {
         width: 100%;
@@ -136,4 +137,19 @@ h2 {
 
 .test-container {
     margin-left: 200px;
+}
+
+.background {
+    position: fixed;
+    top: 0;
+    z-index: -1;
+    width: 100%;
+}
+
+.trasparent-desc__wrap {
+
+}
+
+.transparent-desc__item {
+    
 }
