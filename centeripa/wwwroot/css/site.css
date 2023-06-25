@@ -6,6 +6,9 @@
 }
 
 p {
+  font-family: Pretendard, sans-serif;
+  letter-spacing: -0.05em;
+  word-break: keep-all;
   margin: 0;
 }
 

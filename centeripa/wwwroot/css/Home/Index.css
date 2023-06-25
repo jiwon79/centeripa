@@ -38,8 +38,8 @@ h2 {
     color: white;
 
     > p:nth-child(1) {
-        font-size: 60px;
-        line-height: 60px;
+        font-size: 50px;
+        line-height: 50px;
         margin-bottom: 10px;
     }
 
@@ -52,19 +52,20 @@ h2 {
     > p:nth-child(3) {
         font-size: 30px;
         line-height: 30px;
-        margin-bottom: 40px;
+        margin-bottom: 50px;
     }
 
-    > p:nth-child(4) {
-        font-size: 70px;
-        line-height: 70px;
+    > .title {
+        font-size: 50px;
+        line-height: 50px;
+        margin-bottom: 6px;
     }
 
-    > p:nth-child(5) {
+    > .sub-title {
         font-size: 30px;
         line-height: 30px;
         color: var(--main100);
-        margin-bottom: 30px;
+        margin-bottom: 50px;
     }
 
     > .doctor-link {
@@ -73,8 +74,8 @@ h2 {
         align-items: center;
         justify-content: center;
         border: 1px solid white;
-        width: 260px;
-        height: 60px;
+        width: 200px;
+        height: 50px;
         transition: 0.5s;
         
 
@@ -88,6 +89,48 @@ h2 {
             background-color: var(--main400);
             border: none;
         }
+    }
+}
+
+.grid-desc__wrap {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 50px 1fr;
+    width: 100%;
+    padding: 50px 100px 50px 100px;;
+
+    > .underline {
+        width: 100%;
+        height: 1px;
+        background-color: #ddd;
+    }
+}
+
+.grid-desc__item {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+
+    > .title__big {
+        font-size: 40px;
+    }
+
+    > .icon {
+        margin-bottom: 20px;
+    }
+
+    > .title {
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 10px;
+
+        > span {
+            color: var(--main400);
+        }
+    }
+
+    > .desc {
+
     }
 }
 
