@@ -34,6 +34,16 @@ nav {
   animation: 1s ease-out 0s 1 slideInFromRight forwards;
 }
 
+.delay-3 {
+  opacity: 0;
+  animation-delay: 0.3s;
+}
+
+.delay-6 {
+  opacity: 0;
+  animation-delay: 0.6s;
+}
+
 @keyframes slideInFromRight {
   0% {
       transform: translateX(-80px);

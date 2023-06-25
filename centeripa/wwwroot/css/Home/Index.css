@@ -1,7 +1,3 @@
-h2 {
-    color: red;
-}
-
 .banner__main {
     position: relative;
     overflow: hidden;
@@ -137,10 +133,6 @@ h2 {
     > .desc {
 
     }
-}
-
-.test-container {
-    margin-left: 200px;
 }
 
 .background {
