@@ -6,6 +6,7 @@
     <title>@ViewData["Title"] - centeripa</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/Layout.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/centeripa.styles.css" asp-append-version="true" />
     @RenderSection("Styles", required: false)
 </head>
@@ -35,9 +36,39 @@
         @RenderBody()
     </main>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2023 - centeripa - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+    <footer class="footer">
+        <div class="footer__left">
+            <div class="brand-text__wrap">
+                <p class="brand-text">
+                    Center IPA<span>.</span>
+                    </p>
+                <p class="brand-text__sub">
+                    Center IPA Medical Group & Foundation
+                </p>
+            </div>
+            <div class="brand-desc__warp">
+                <p class="brand-desc">
+                    There are old age,<br>
+                    but no old people<span>.</span>
+                </p>
+                <a href="" class="link">
+                    <span>가입 문의</span>
+                </a>
+            </div>
+        </div>
+        <div class="info__wrap">
+            <p class="title">Info</p>
+            <p class="desc">TEL. (714) 495-4392</p>
+            <p class="desc">FAX. (714) 388-3354</p>
+            <p class="desc last">Monday - Friday (8:30 AM - 5:30 PM, PST)</p>
+
+            <p class="title">Address</p>
+            <p class="desc">6800 Lincoln Ave Suite 200,</p>
+            <p class="desc last">Buena Park, CA 90620</p>
+
+            <p class="title">Socials</p>
+            <a class="link" href="">Youtube</a>
+            <a class="link" href="">Linkedin</a>
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
