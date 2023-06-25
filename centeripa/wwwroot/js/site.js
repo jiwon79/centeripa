@@ -31,7 +31,9 @@ const horizontalTransformByScroll = () => {
 
         if(isVisible) {
             let distanceFromTop = (window.innerHeight - elemTop) / 10;
-            el.style.transform = `translateX(${distanceFromTop}px)`;
+            let transform = el.style.transform.replace(/translateX\([^)]*\)/, "");
+            transform += `translateX(${distanceFromTop}px)`;
+            el.style.transform = transform;
         }
     });
 }
