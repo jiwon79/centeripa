@@ -17,12 +17,13 @@ elements.forEach(el => {
 });
 
 // scroll transform animation
-const scrollElements = document.querySelectorAll('.scroll-transform');
+const scrollHorizontalElements = document.querySelectorAll('.scroll-transform__horizontal');
+const scrollVerticalElements = document.querySelectorAll('.scroll-transform__vertical');
 
 let ticking = false;
 
-const transformByScroll = () => {
-    scrollElements.forEach(el => {
+const horizontalTransformByScroll = () => {
+    scrollHorizontalElements.forEach(el => {
         const rect = el.getBoundingClientRect();
         const elemTop = rect.top;
         const elemBottom = rect.bottom;
@@ -34,12 +35,26 @@ const transformByScroll = () => {
         }
     });
 }
-transformByScroll();
+
+const verticalTransformByScroll = () => {
+    scrollVerticalElements.forEach(el => {
+        const scrollPosition = window.scrollY;
+
+        if(scrollPosition > 0) {
+            let transformDistance = -scrollPosition / 10;
+            el.style.transform = `translateY(${transformDistance}px)`;
+        }
+    });
+}
+
+horizontalTransformByScroll();
+verticalTransformByScroll();
 
 window.addEventListener('scroll', function(e) {
     if (!ticking) {
         window.requestAnimationFrame(function() {
-            transformByScroll();
+            horizontalTransformByScroll();
+            verticalTransformByScroll();
             ticking = false;
         });
 
