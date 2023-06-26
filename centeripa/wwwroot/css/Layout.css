@@ -7,6 +7,11 @@
     padding: 60px 100px 60px 100px;
 }
 
+.footer p {
+    font-family: 'Questrial', sans-serif;
+    letter-spacing: normal;
+}
+
 .footer__left {
     display: flex;
     flex-direction: column;
@@ -15,6 +20,7 @@
 
 .brand-text__wrap {
     > .brand-text {
+        line-height: 1.2em;
         font-size: 36px;
 
         > span {
@@ -23,6 +29,7 @@
     }
 
     > .brand-text__sub {
+        font-family: 'Questrial', sans-serif;
         font-size: 16px;
         color: var(--grey300);
     }
@@ -47,7 +54,7 @@
 
         > span {
             font-size: 18px;
-            line-height: 18px;
+            line-height: 1.2em;
             color: white;
         }
 
