@@ -15,22 +15,47 @@
 </head>
 <body>
     <header>
-        <nav>
-            <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">centeripa</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
-                    </ul>
+        <nav class="nav">
+            <div class="nav-top">
+                <img src="~/asset/images/logo_horizontal.png" alt="logo" width="120">
+                <div class="spacer"></div>
+                <p>로그인</p>
+                <select name="lang" id="lang">
+                    <option value="ko">KO</option>
+                    <option value="en">EN</option>
+                </select>
+            </div>
+            <div class="nav-bottom">
+                <button class="hamburger">☰</button>
+                <div class="dropdown">
+                    <a href="#">센터메니컬그룹 <span class="arrow">▼</span></a>
+                    <div class="submenu">
+                        <a href="#">소개</a>
+                        <a href="#" class="last">이사회 & 협력사 보험사</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <a href="#">가입 안내 <span class="arrow">▼</span></a>
+                </div>
+                <div class="dropdown">
+                    <a href="#">의료진 <span class="arrow">▼</span></a>
+                    <div class="submenu">
+                        <a href="#">주치의</a>
+                        <a href="#">전문의</a>
+                        <a href="#" class="last">보조 기관</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <a href="#">의학 정보 <span class="arrow">▼</span></a>
+                    <div class="submenu">
+                        <a href="#" class="last">새로운 소식</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <a href="#">장학재단 <span class="arrow">▼</span></a>
+                    <div class="submenu">
+                        <a href="#" class="last">갤러리</a>
+                    </div>
                 </div>
             </div>
         </nav>
@@ -77,6 +102,27 @@
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const dropdowns = document.querySelectorAll('.dropdown');
+
+        hamburger.addEventListener('click', () => {
+            console.log('click');
+            dropdowns.forEach((dropdown) => {
+                dropdown.querySelector('a').style.display = 'block';
+            });
+        });
+
+        dropdowns.forEach((dropdown) => {
+            console.log('click-2');
+            dropdown.querySelector('.arrow').style.display = 'inline';
+            dropdown.querySelector('.arrow').addEventListener('click', (e) => {
+                e.preventDefault();
+                dropdown.querySelector('.submenu').style.display = 'block';
+            });
+        });
+
+    </script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
