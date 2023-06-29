@@ -190,16 +190,6 @@
                 }
             });
         });
-
-        @* dropdowns.forEach((dropdown) => {
-            console.log('click-2');
-            dropdown.querySelector('.arrow').style.display = 'inline';
-            dropdown.querySelector('.arrow').addEventListener('click', (e) => {
-                e.preventDefault();
-                dropdown.querySelector('.submenu').style.display = 'block';
-            });
-        }); *@
-
     </script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>

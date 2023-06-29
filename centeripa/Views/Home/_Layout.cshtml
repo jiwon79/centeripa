@@ -1,0 +1,29 @@
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var currentPath = Context.Request.Path;
+    var homePaths = new List<string> { "/", "/Home", "/Home/" };
+}
+
+<head>
+    @RenderSection("Styles", required: false)
+    <link rel="stylesheet" href="~/asset/Home/Layout.css">
+</head>
+
+@if (homePaths.Contains(currentPath))
+{
+    @RenderBody()
+}
+else
+{
+    <div class="layout__wrap">
+        <div class="nav-sub">
+            <a href="/Home/About">
+                <span>소개</span>
+            </a>
+            <a href="#">
+                <span>이사회 & 협력 보험사</span>
+            </a>
+        </div>
+        @RenderBody()
+    </div>
+}
