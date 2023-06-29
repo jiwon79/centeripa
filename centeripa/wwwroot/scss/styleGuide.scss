@@ -1,0 +1,52 @@
+$main100: rgb(199,236,229);
+$main400: #68C6B5;
+$main700: #122037;
+
+$grey100: #FFFFFF;
+$grey200: #E2E2E2;
+$grey300: #C6C6C6;
+$grey400: #A8A8A8;
+$grey500: #8A8A8A;
+$grey600: #6C6C6C;
+$grey700: #4E4E4E;
+$grey800: #303030;
+$grey900: #191919;
+$black: #000000;
+
+:export {
+    main100: $main100;
+    main400: $main400;
+    main700: $main700;
+
+    grey100: $grey100;
+    grey200: $grey200;
+    grey300: $grey300;
+    grey400: $grey400;
+    grey500: $grey500;
+    grey600: $grey600;
+    grey700: $grey700;
+    grey800: $grey800;
+    grey900: $grey900;
+    black: $black;
+}
+
+$mobile: 768px;
+$tablet: 1023px;
+
+@mixin mobile{
+  @media (max-width: $mobile) {
+    @content;
+  }
+}
+
+@mixin tablet{
+  @media (min-width: calc($mobile + 1)) and (max-width: $tablet) {
+    @content;
+  }
+}
+
+@mixin desktop{
+  @media (min-width: calc($tablet + 1)) {
+    @content;
+  }
+}
