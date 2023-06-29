@@ -17,48 +17,87 @@
     <header>
         <nav class="nav">
             <div class="nav-top">
-                <img src="~/asset/images/logo_horizontal.png" alt="logo" width="120">
+                <img class="logo" src="~/asset/images/logo_horizontal.png" alt="logo" width="120" height="36">
                 <div class="spacer"></div>
-                <a href="#" class="login">
+                <a href="#" class="login-top">
                     <span>로그인</span>
                 </a>
                 <a href="#" class="contact">
-                    <span>가입문의</span>
+                    <span>가입 문의</span>
                 </a>
-                <select name="lang" id="lang" class="lang">
+                <select name="lang" id="lang" class="lang-top">
                     <option value="ko">KO</option>
                     <option value="en">EN</option>
                 </select>
+                <button class="button-open">☰</button>
             </div>
-            <button class="button-open">☰</button>
+
             <div class="nav-bottom" data-isShow="false">
-                <button class="button-close">X</button>
+                <div class="form">
+                    <select name="lang" id="lang" class="lang-bottom">
+                        <option value="ko">KO</option>
+                        <option value="en">EN</option>
+                    </select>
+                    <a href="#" class="login-bottom">
+                        <span>로그인</span>
+                    </a>
+                </div>
                 <div class="dropdown">
-                    <a href="#">센터메니컬그룹 <span class="arrow">▼</span></a>
+                    <div class="menu">
+                        <div class="arrow" data-isOpen="false">
+                            <span class="arrow__open">▼</span>
+                            <span class="arrow__close">▲</span>
+                        </div>
+                        <a href="#">센터메니컬그룹</a>
+                    </div>
                     <div class="submenu">
                         <a href="#">소개</a>
                         <a href="#" class="last">이사회 & 협력사 보험사</a>
                     </div>
                 </div>
+
                 <div class="dropdown">
-                    <a href="#">가입 안내 <span class="arrow">▼</span></a>
+                    <div class="menu">
+                        <a href="#">가입안내</a>
+                    </div>
                 </div>
+                
                 <div class="dropdown">
-                    <a href="#">의료진 <span class="arrow">▼</span></a>
+                    <div class="menu">
+                        <div class="arrow" data-isOpen="false">
+                            <span class="arrow__open">▼</span>
+                            <span class="arrow__close">▲</span>
+                        </div>
+                        <a href="#">의료진</a>
+                    </div>
                     <div class="submenu">
                         <a href="#">주치의</a>
                         <a href="#">전문의</a>
                         <a href="#" class="last">보조 기관</a>
                     </div>
                 </div>
+                
                 <div class="dropdown">
-                    <a href="#">의학 정보 <span class="arrow">▼</span></a>
+                    <div class="menu">
+                        <div class="arrow" data-isOpen="false">
+                            <span class="arrow__open">▼</span>
+                            <span class="arrow__close">▲</span>
+                        </div>
+                        <a href="#">의학 정보</a>
+                    </div>
                     <div class="submenu">
                         <a href="#" class="last">새로운 소식</a>
                     </div>
                 </div>
+                
                 <div class="dropdown">
-                    <a href="#">장학재단 <span class="arrow">▼</span></a>
+                    <div class="menu">
+                        <div class="arrow" data-isOpen="false">
+                            <span class="arrow__open">▼</span>
+                            <span class="arrow__close">▲</span>
+                        </div>
+                        <a href="#">장학재단</a>
+                    </div>
                     <div class="submenu">
                         <a href="#" class="last">갤러리</a>
                     </div>
@@ -111,7 +150,6 @@
     <script>
         const bottomNav = document.querySelector('.nav-bottom');
         const openButton = document.querySelector('.button-open');
-        const closeButton = document.querySelector('.button-close');
 
         const dropdowns = document.querySelectorAll('.dropdown');
 
@@ -119,26 +157,23 @@
             const isShow = bottomNav.dataset.isshow;
             if (isShow == "true") {
                 bottomNav.dataset.isshow = "false";
-                bottomNav.style.display = 'none';
+                bottomNav.classList.remove('nav-bottom--show');
+                bottomNav.classList.add('nav-bottom--hide');
             } else {
                 bottomNav.dataset.isshow = "true";
-                bottomNav.style.display = 'flex';
+                bottomNav.classList.remove('nav-bottom--hide');
+                bottomNav.classList.add('nav-bottom--show');
             }
         });
 
-        closeButton.addEventListener('click', () => {
-            bottomNav.dataset.isshow = "false";
-            bottomNav.style.display = 'none';
-        });
-
-        dropdowns.forEach((dropdown) => {
+        @* dropdowns.forEach((dropdown) => {
             console.log('click-2');
             dropdown.querySelector('.arrow').style.display = 'inline';
             dropdown.querySelector('.arrow').addEventListener('click', (e) => {
                 e.preventDefault();
                 dropdown.querySelector('.submenu').style.display = 'block';
             });
-        });
+        }); *@
 
     </script>
     @await RenderSectionAsync("Scripts", required: false)

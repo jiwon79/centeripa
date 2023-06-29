@@ -52,7 +52,7 @@
   font-style: normal;
 }
 
-p {
+a, p {
   font-family: 'Pretendard', sans-serif;
   letter-spacing: -0.05em;
   line-height: 1.8em;
