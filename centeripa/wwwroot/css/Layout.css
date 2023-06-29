@@ -135,8 +135,8 @@
         }
 
         > .logo {
-            width: 160px;
-            height: 48px;
+            width: 120px;
+            height: 36px;
         }
 
         > .login-top {
@@ -153,14 +153,14 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 48px;
+            height: 36px;
             padding: 0 20px 0 20px;
             border: 2px solid var(--main400);
             border-radius: 100px;
-            margin-right: 20px;
+            margin-right: 12px;
 
             > span {
-                font-size: 18px;
+                font-size: 14px;
             }
         }
     }
@@ -175,8 +175,8 @@
         color: var(--grey100);
         padding: 0;
         font-size: 30px;
-        width: 48px;
-        height: 48px;
+        width: 36px;
+        height: 36px;
         outline: none;
         border: none;
     }
@@ -212,16 +212,65 @@
 
     }
 
-    .dropdown a {
-        display: block;
+    .menu {
+        display: flex;
+        color: white;
+        padding: 10px 30px 10px 30px;
+
+        > a {
+            display: block;
+            flex: 1;
+            color: var(--grey100);
+            text-decoration: none;
+            text-align: center;
+            font-size: 18px;
+        }
     }
 
-    .submenu a {
+    .arrow {
+        width: 36px;
+        height: 36px;
+        cursor: pointer;
+
+        > .arrow__open {
+            display: inline;
+        }
+
+        > .arrow__close {
+            display: none;
+        }
+    }
+
+    .arrow__empty {
+        display: block;
+        width: 36px;
+    }
+
+    .submenu {
+        > a {
+            display: block;
+            width: 100%;
+            padding: 10px 0 10px 0;
+            color: var(--grey100);
+            text-decoration: none;
+            text-align: center;
+            background-color: var(--grey900);
+            padding: 10px 30px 10px 62px;
+        }
+    }
+
+    .submenu--hide {
         display: none;
     }
 
-    .dropdown:hover .submenu {
-        display: block;
+    .submenu--show {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: var(--grey900);
     }
 }
 

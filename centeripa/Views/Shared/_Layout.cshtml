@@ -50,7 +50,7 @@
                         </div>
                         <a href="#">센터메니컬그룹</a>
                     </div>
-                    <div class="submenu">
+                    <div class="submenu submenu--hide">
                         <a href="#">소개</a>
                         <a href="#" class="last">이사회 & 협력사 보험사</a>
                     </div>
@@ -58,6 +58,7 @@
 
                 <div class="dropdown">
                     <div class="menu">
+                        <div class="arrow__empty"></div>
                         <a href="#">가입안내</a>
                     </div>
                 </div>
@@ -70,7 +71,7 @@
                         </div>
                         <a href="#">의료진</a>
                     </div>
-                    <div class="submenu">
+                    <div class="submenu submenu--hide">
                         <a href="#">주치의</a>
                         <a href="#">전문의</a>
                         <a href="#" class="last">보조 기관</a>
@@ -85,7 +86,7 @@
                         </div>
                         <a href="#">의학 정보</a>
                     </div>
-                    <div class="submenu">
+                    <div class="submenu submenu--hide">
                         <a href="#" class="last">새로운 소식</a>
                     </div>
                 </div>
@@ -98,7 +99,7 @@
                         </div>
                         <a href="#">장학재단</a>
                     </div>
-                    <div class="submenu">
+                    <div class="submenu submenu--hide">
                         <a href="#" class="last">갤러리</a>
                     </div>
                 </div>
@@ -164,6 +165,28 @@
                 bottomNav.classList.remove('nav-bottom--hide');
                 bottomNav.classList.add('nav-bottom--show');
             }
+        });
+
+        const arrowButtons = document.querySelectorAll('.arrow');
+        const submenus = document.querySelectorAll('.submenu');
+
+        arrowButtons.forEach((arrowButton, index) => {
+            arrowButton.addEventListener('click', () => {
+                const isOpen = arrowButton.dataset.isopen;
+                if (isOpen == "true") {
+                    arrowButton.dataset.isopen = "false";
+                    arrowButton.querySelector('.arrow__open').style.display = 'inline';
+                    arrowButton.querySelector('.arrow__close').style.display = 'none';
+                    submenus[index].classList.remove('submenu--show');
+                    submenus[index].classList.add('submenu--hide');
+                } else {
+                    arrowButton.dataset.isopen = "true";
+                    arrowButton.querySelector('.arrow__open').style.display = 'none';
+                    arrowButton.querySelector('.arrow__close').style.display = 'inline';
+                    submenus[index].classList.remove('submenu--hide');
+                    submenus[index].classList.add('submenu--show');
+                }
+            });
         });
 
         @* dropdowns.forEach((dropdown) => {
