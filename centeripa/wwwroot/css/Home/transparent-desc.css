@@ -1,0 +1,126 @@
+@media screen and (min-width: 769px) {
+    .transparent-desc__wrap {
+        padding: 80px 100px 80px 100px;
+    }
+
+    .desc-background {
+        display: none;
+    }
+
+    .transparent-desc__item {
+        width: 40%;
+        color: white;
+
+        &.right {
+            position: relative;
+            left: 50%;
+        }
+
+        > .title {
+            font-size: 38px;
+            line-height: 1.2em;
+            letter-spacing: normal;
+            margin-bottom: 20px;
+        }
+
+        > .underline {
+            width: 80%;
+            height: 1px;
+            background-color: white;
+            margin-bottom: 20px;
+        }
+
+        > .desc__small {
+            width: 80%;
+            font-size: 16px;
+            font-weight: lighter;
+            margin-bottom: 20px;
+        }
+
+        > .link {
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid white;
+            width: 160px;
+            height: 50px;
+            transition: 0.5s;
+
+            > span {
+                font-size: 18px;
+                line-height: 18px;
+                color: white;
+            }
+
+            &:hover {
+                background-color: var(--main400);
+                border: none;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .transparent-desc__wrap {
+        position: relative;
+        overflow: hidden;
+        object-fit: cover;
+        padding: 40px 20px 40px 20px;
+    }
+
+    .desc-background {
+        position: absolute;
+        height: 100%;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+
+    .title {
+        font-size: 28px;
+        line-height: 1.2em;
+        color: var(--grey100);
+        letter-spacing: normal;
+        margin-bottom: 40px;
+    }
+
+    .underline {
+        width: 60%;
+        height: 2px;
+        background-color: var(--main400);
+        margin-bottom: 20px;
+    }
+
+    .desc__small {
+        width: 80%;
+        font-size: 14px;
+        font-weight: lighter;
+        color: var(--grey100);
+        margin-bottom: 20px;
+    }
+
+    .link {
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid white;
+        width: 120px;
+        height: 40px;
+        transition: 0.5s;
+
+        > span {
+            font-size: 16px;
+            line-height: 16px;
+            color: white;
+        }
+
+        &:hover {
+            background-color: var(--main400);
+            border: none;
+        }
+    }
+    
+}

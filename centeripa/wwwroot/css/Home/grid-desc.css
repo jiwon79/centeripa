@@ -8,7 +8,7 @@
 
 }
 
-@media screen and (max-width: 768px) {
+@media (max-width: 768px) {
     .grid-desc__wrap {
         grid-template-columns: 1fr;
         grid-template-rows: auto;
@@ -61,11 +61,14 @@
     }
 }
 
-@media screen and (max-width: 768px) {
+@media (max-width: 768px) {
+    .grid-desc__wrap {
+        padding-bottom: 0;
+    }
+
     .grid-desc__item {
         width: 100%;
-        padding: 0 30px 30px 30px;
-        margin-bottom: 30px;
+        padding: 30px;
         border-bottom: 1px solid #ddd;
     
         > .title__big {
@@ -82,6 +85,7 @@
             font-weight: bold;
             margin-bottom: 10px;
             line-height: normal;
+            color: var(--grey900);
     
             > span {
                 color: var(--main400);
