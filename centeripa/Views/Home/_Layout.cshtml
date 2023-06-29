@@ -2,12 +2,18 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
     var currentPath = Context.Request.Path;
     var homePaths = new List<string> { "/", "/Home", "/Home/" };
+    var isAboutPage = currentPath.Value?.TrimEnd('/') == "/Home/About";
+
+    Func<bool, string> getItemClass = (bool isActive) =>
+    {
+        return "sub-nav__item " + (isActive ? "active" : "");
+    };
 }
 
-<head>
-    @RenderSection("Styles", required: false)
-    <link rel="stylesheet" href="~/asset/Home/Layout.css">
-</head>
+@RenderSection("Styles", required: false)
+@section Styles {
+    <link rel="stylesheet" href="~/css/Home/Layout.css">
+}
 
 @if (homePaths.Contains(currentPath))
 {
@@ -16,14 +22,16 @@
 else
 {
     <div class="layout__wrap">
-        <div class="nav-sub">
-            <a href="/Home/About">
+        <div class="sub-nav">
+            <a href="/Home/About" class="@getItemClass(isAboutPage)">
                 <span>소개</span>
             </a>
-            <a href="#">
+            <a href="#" class="sub-nav__item last">
                 <span>이사회 & 협력 보험사</span>
             </a>
         </div>
-        @RenderBody()
+        <div class="main__wrap">
+            @RenderBody()
+        </div>
     </div>
 }
