@@ -40,13 +40,13 @@ $tablet: 1023px;
 }
 
 @mixin tablet{
-  @media (min-width: calc($mobile + 1)) and (max-width: $tablet) {
+  @media (min-width: calc($mobile + 1px)) and (max-width: $tablet) {
     @content;
   }
 }
 
 @mixin desktop{
-  @media (min-width: calc($tablet + 1)) {
+  @media (min-width: calc($tablet + 1px)) {
     @content;
   }
 }
