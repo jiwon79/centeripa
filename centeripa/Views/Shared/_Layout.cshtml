@@ -19,14 +19,20 @@
             <div class="nav-top">
                 <img src="~/asset/images/logo_horizontal.png" alt="logo" width="120">
                 <div class="spacer"></div>
-                <p>로그인</p>
-                <select name="lang" id="lang">
+                <a href="#" class="login">
+                    <span>로그인</span>
+                </a>
+                <a href="#" class="contact">
+                    <span>가입문의</span>
+                </a>
+                <select name="lang" id="lang" class="lang">
                     <option value="ko">KO</option>
                     <option value="en">EN</option>
                 </select>
             </div>
-            <div class="nav-bottom">
-                <button class="hamburger">☰</button>
+            <button class="button-open">☰</button>
+            <div class="nav-bottom" data-isShow="false">
+                <button class="button-close">X</button>
                 <div class="dropdown">
                     <a href="#">센터메니컬그룹 <span class="arrow">▼</span></a>
                     <div class="submenu">
@@ -103,14 +109,26 @@
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     <script>
-        const hamburger = document.querySelector('.hamburger');
+        const bottomNav = document.querySelector('.nav-bottom');
+        const openButton = document.querySelector('.button-open');
+        const closeButton = document.querySelector('.button-close');
+
         const dropdowns = document.querySelectorAll('.dropdown');
 
-        hamburger.addEventListener('click', () => {
-            console.log('click');
-            dropdowns.forEach((dropdown) => {
-                dropdown.querySelector('a').style.display = 'block';
-            });
+        openButton.addEventListener('click', () => {
+            const isShow = bottomNav.dataset.isshow;
+            if (isShow == "true") {
+                bottomNav.dataset.isshow = "false";
+                bottomNav.style.display = 'none';
+            } else {
+                bottomNav.dataset.isshow = "true";
+                bottomNav.style.display = 'flex';
+            }
+        });
+
+        closeButton.addEventListener('click', () => {
+            bottomNav.dataset.isshow = "false";
+            bottomNav.style.display = 'none';
         });
 
         dropdowns.forEach((dropdown) => {
