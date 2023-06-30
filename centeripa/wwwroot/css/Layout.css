@@ -1,4 +1,23 @@
+:export {
+  main100: rgb(199, 236, 229);
+  main400: #68C6B5;
+  main700: #122037;
+  grey100: #FFFFFF;
+  grey200: #E2E2E2;
+  grey300: #C6C6C6;
+  grey400: #A8A8A8;
+  grey500: #8A8A8A;
+  grey600: #6C6C6C;
+  grey700: #4E4E4E;
+  grey800: #303030;
+  grey900: #191919;
+  black: #000000;
+}
+
 @media screen and (min-width: 769px) {
+  header {
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+  }
   .nav {
     display: flex;
     flex-direction: column;
