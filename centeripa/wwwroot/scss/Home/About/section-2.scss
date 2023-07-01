@@ -1,0 +1,78 @@
+@import "../../styleGuide.scss";
+
+.section-2 {
+    width: 100%;
+    height: 400px;
+    background-color: transparentize($color: $grey900, $amount: 0.3);
+    color: $grey100;
+    display: flex;
+    justify-content: space-around;
+    padding: 60px;
+
+    @include tablet {
+        padding: 40px;
+    }
+}
+
+.section-2-1 {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+
+    > .title {
+        font-size: 32px;
+        line-height: 1.2em;
+        margin-bottom: 20px;
+    }
+
+    > .service__wrap {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        column-gap: 10px;
+        row-gap: 20px;
+    }
+
+    .service__item {
+        display: flex;
+        flex-direction: column;
+
+        > .title {
+            font-size: 30px;
+            line-height: 1.2em;
+            margin-bottom: 20px;
+            color: $main400;
+        }
+
+        > .desc {
+            width: 60%;
+            font-size: 16px;
+            letter-spacing: -0.05em;
+            line-height: 1.4em;
+
+            @include tablet {
+                width: 100%;
+            }
+        }
+    }
+}
+
+.section-2-2 {
+    display: flex;
+    flex-direction: column;
+    align-self: flex-end;
+    width: 50%;
+
+    > .underline {
+        width: 60%;
+        height: 1px;
+        background-color: $main400;
+        margin-bottom: 30px;
+    }
+
+    > .desc {
+        width: 80%;
+        font-size: 14px;
+        line-height: 1.8em;
+    }
+}
