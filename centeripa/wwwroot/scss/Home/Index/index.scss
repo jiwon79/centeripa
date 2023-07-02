@@ -1,3 +1,9 @@
+@import "../../styleGuide.scss";
+@import "./banner-main.scss";
+@import "./benefit.scss";
+@import "./grid-desc.scss";
+@import "./transparent-desc.scss";
+
 .background {
     position: fixed;
     top: 10%;
@@ -18,8 +24,13 @@
 
     > .title__wrap {
         > .title {
+            font-family: 'Questrial';
             font-size: 36px;
             margin-bottom: 8px;
+
+            > span {
+                color: var(--main400);
+            }
         }
 
         > .desc {

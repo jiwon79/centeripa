@@ -1,6 +1,11 @@
+.transparent-desc__wrap {
+    background-color: transparentize($color: $grey900, $amount: 0.5);
+}
+
 @media screen and (min-width: 769px) {
     .transparent-desc__wrap {
         padding: 80px 100px 80px 100px;
+        height: 600px;
     }
 
     .desc-background {
@@ -24,7 +29,7 @@
         }
 
         > .underline {
-            width: 80%;
+            width: 40%;
             height: 1px;
             background-color: white;
             margin-bottom: 20px;

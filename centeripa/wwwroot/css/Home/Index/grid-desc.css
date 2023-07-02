@@ -1,87 +1,20 @@
-.grid-desc__wrap {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  width: 100%;
-  padding: 50px 100px 50px 100px;
-  background-color: white;
-}
+/* Error: Undefined mixin.
+ *    ,
+ * 10 | /     @include mobile {
+ * 11 | |         grid-template-columns: 1fr;
+ * 12 | |         grid-template-rows: auto;
+ * 13 | |         padding: 20px 0 20px 0;
+ * 14 | \     }
+ *    '
+ *   scss/Home/Index/grid-desc.scss 10:5  root stylesheet */
 
-@media (max-width: 768px) {
-  .grid-desc__wrap {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-    padding: 20px 0 20px 0;
-  }
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: Undefined mixin.\a    \2577 \a 10 \2502  \250c      @include mobile {\a 11 \2502  \2502          grid-template-columns: 1fr;\a 12 \2502  \2502          grid-template-rows: auto;\a 13 \2502  \2502          padding: 20px 0 20px 0;\a 14 \2502  \2514      }\a    \2575 \a   scss/Home/Index/grid-desc.scss 10:5  root stylesheet";
 }
-.grid-desc__item {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  padding-right: 20%;
-}
-.grid-desc__item > .title__big {
-  font-family: "Questrial", sans-serif;
-  letter-spacing: normal;
-  font-size: 40px;
-}
-.grid-desc__item > .title__big > span {
-  color: var(--main400);
-}
-.grid-desc__item > .icon {
-  margin-bottom: 20px;
-}
-.grid-desc__item > .title {
-  font-size: 18px;
-  font-weight: bold;
-  margin-bottom: 10px;
-  line-height: normal;
-}
-.grid-desc__item > .title > span {
-  color: var(--main400);
-}
-.grid-desc__item > .desc {
-  line-height: 1.6em;
-  font-weight: 300;
-}
-
-@media screen and (min-width: 769px) {
-  .underline-descktop {
-    padding-bottom: 50px;
-    margin-bottom: 50px;
-    border-bottom: 1px solid #ddd;
-  }
-}
-@media (max-width: 768px) {
-  .grid-desc__wrap {
-    padding-bottom: 0;
-  }
-  .grid-desc__item {
-    width: 100%;
-    padding: 30px;
-    border-bottom: 1px solid #ddd;
-  }
-  .grid-desc__item > .title__big {
-    letter-spacing: normal;
-    font-size: 30px;
-  }
-  .grid-desc__item > .icon {
-    margin-bottom: 20px;
-  }
-  .grid-desc__item > .title {
-    font-size: 18px;
-    font-weight: bold;
-    margin-bottom: 10px;
-    line-height: normal;
-    color: var(--grey900);
-  }
-  .grid-desc__item > .title > span {
-    color: var(--main400);
-  }
-  .grid-desc__item > .desc {
-    line-height: 1.6em;
-    font-weight: 300;
-  }
-}
-
-/*# sourceMappingURL=grid-desc.css.map */
