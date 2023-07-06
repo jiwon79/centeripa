@@ -6,6 +6,9 @@
     padding: 50px 100px 50px 100px;;
     background-color: white;
 
+    @include tablet {
+        padding: 50px 20px 50px 20px;
+    }
 
     @include mobile {
         grid-template-columns: 1fr;
@@ -24,6 +27,7 @@
         font-family: 'Questrial', sans-serif;
         letter-spacing: normal;
         font-size: 40px;
+        line-height: 1.2em;
 
         > span {
             color: var(--main400);
@@ -31,14 +35,14 @@
     }
 
     > .icon {
-        margin-bottom: 20px;
+        margin-bottom: 30px;
     }
 
     > .title {
         font-size: 18px;
-        font-weight: bold;
+        font-weight: 600;
         margin-bottom: 10px;
-        line-height: normal;
+        line-height: 1.15em;
 
         > span {
             color: var(--main400);
@@ -48,6 +52,7 @@
     > .desc {
         line-height: 1.6em;
         font-weight: 300;
+        color: var(--grey700);
     }
 
     padding-top: 40px;
@@ -75,7 +80,7 @@
     }
 }
 
-@media (max-width: 768px) {
+@include mobile {
     .grid-desc__wrap {
         padding-bottom: 0;
     }

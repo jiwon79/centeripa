@@ -14,6 +14,22 @@
   black: #000000;
 }
 
+:export {
+  main100: rgb(199, 236, 229);
+  main400: #68C6B5;
+  main700: #122037;
+  grey100: #FFFFFF;
+  grey200: #E2E2E2;
+  grey300: #C6C6C6;
+  grey400: #A8A8A8;
+  grey500: #8A8A8A;
+  grey600: #6C6C6C;
+  grey700: #4E4E4E;
+  grey800: #303030;
+  grey900: #191919;
+  black: #000000;
+}
+
 .banner__main {
   position: relative;
   overflow: hidden;
@@ -54,33 +70,40 @@
 @media (min-width: 1024px) {
   .banner__main__content {
     position: absolute;
-    top: 60px;
-    left: 50%;
+    top: 140px;
+    left: 60%;
+  }
+}
+@media (min-width: 769px) and (max-width: 1023px) {
+  .banner__main__content {
+    position: absolute;
+    top: 140px;
+    left: 60%;
   }
 }
 .banner__main__content p:nth-child(1) {
   font-size: 50px;
-  line-height: 1.2em;
+  line-height: 1em;
   margin-bottom: 10px;
 }
 .banner__main__content p:nth-child(2) {
   font-size: 30px;
-  line-height: 1.2em;
+  line-height: 1.1em;
   margin-bottom: 10px;
 }
 .banner__main__content p:nth-child(3) {
   font-size: 30px;
   line-height: 30px;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 .banner__main__content .title {
   font-size: 50px;
-  line-height: 50px;
+  line-height: 1em;
   margin-bottom: 6px;
 }
 .banner__main__content .sub-title {
-  font-size: 30px;
-  line-height: 30px;
+  font-size: 28px;
+  line-height: 1em;
   color: var(--main100);
   margin-bottom: 50px;
 }
@@ -195,7 +218,9 @@
 .benefit__wrap > .title {
   width: 300px;
   font-size: 36px;
-  line-height: 44px;
+  line-height: 1.2em;
+  letter-spacing: 0;
+  font-weight: 600;
   text-align: center;
   margin-bottom: 40px;
 }
@@ -209,7 +234,8 @@
   .benefit__wrap > .title {
     width: 300px;
     font-size: 28px;
-    line-height: 34px;
+    letter-spacing: 0;
+    line-height: 1.5em;
     align-self: flex-start;
     text-align: left;
   }
@@ -268,8 +294,10 @@
 }
 .benefit-card > .title {
   transition: 0.2s;
-  width: 100px;
-  font-size: 14px;
+  width: 120px;
+  font-size: 16px;
+  line-height: 1.5em;
+  letter-spacing: 0;
   text-align: center;
   height: 30px;
   margin-bottom: 40px;
@@ -291,6 +319,9 @@
     width: 100%;
     margin-bottom: 0;
   }
+  .benefit-card > .title > br {
+    display: none;
+  }
   .benefit-card:hover {
     width: 100%;
     height: 40px;
@@ -306,6 +337,11 @@
   width: 100%;
   padding: 50px 100px 50px 100px;
   background-color: white;
+}
+@media (min-width: 769px) and (max-width: 1023px) {
+  .grid-desc__wrap {
+    padding: 50px 20px 50px 20px;
+  }
 }
 @media (max-width: 768px) {
   .grid-desc__wrap {
@@ -326,18 +362,19 @@
   font-family: "Questrial", sans-serif;
   letter-spacing: normal;
   font-size: 40px;
+  line-height: 1.2em;
 }
 .grid-desc__item > .title__big > span {
   color: var(--main400);
 }
 .grid-desc__item > .icon {
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 .grid-desc__item > .title {
   font-size: 18px;
-  font-weight: bold;
+  font-weight: 600;
   margin-bottom: 10px;
-  line-height: normal;
+  line-height: 1.15em;
 }
 .grid-desc__item > .title > span {
   color: var(--main400);
@@ -345,6 +382,7 @@
 .grid-desc__item > .desc {
   line-height: 1.6em;
   font-weight: 300;
+  color: var(--grey700);
 }
 @media (min-width: 1024px) {
   .grid-desc__item.bottom-line {
@@ -414,12 +452,13 @@
   }
   .transparent-desc__item.right {
     position: relative;
+    top: 40px;
     left: 50%;
   }
   .transparent-desc__item > .title {
     font-size: 38px;
     line-height: 1.2em;
-    letter-spacing: normal;
+    letter-spacing: 0;
     margin-bottom: 20px;
   }
   .transparent-desc__item > .underline {
@@ -432,6 +471,7 @@
     width: 80%;
     font-size: 16px;
     font-weight: lighter;
+    line-height: 1.8em;
     margin-bottom: 20px;
   }
   .transparent-desc__item > .link {
@@ -445,8 +485,10 @@
     transition: 0.5s;
   }
   .transparent-desc__item > .link > span {
-    font-size: 18px;
-    line-height: 18px;
+    font-family: "Avenir";
+    font-size: 16px;
+    line-height: 1em;
+    letter-spacing: 0;
     color: white;
   }
   .transparent-desc__item > .link:hover {
@@ -529,15 +571,18 @@
 }
 .news__header > .title__wrap > .title {
   font-family: "Questrial";
-  font-size: 36px;
+  font-size: 40px;
+  letter-spacing: 0;
+  line-height: 1.2em;
   margin-bottom: 8px;
 }
 .news__header > .title__wrap > .title > span {
   color: var(--main400);
 }
 .news__header > .title__wrap > .desc {
-  font-size: 16px;
-  color: var(--grey600);
+  font-size: 18px;
+  line-height: 1.5em;
+  color: var(--grey500);
 }
 .news__header > .link {
   text-decoration: none;
@@ -550,8 +595,10 @@
   transition: 0.5s;
 }
 .news__header > .link > span {
-  font-size: 18px;
-  line-height: 18px;
+  font-family: "Avenir";
+  font-size: 16px;
+  line-height: 1em;
+  letter-spacing: 0;
   color: var(--grey800);
 }
 .news__header > .link:hover {
@@ -585,8 +632,8 @@
   position: absolute;
   width: 100%;
   height: 100%;
-  background-color: #2e2e2e;
-  opacity: 0.8;
+  background-color: var(--black);
+  opacity: 0.7;
   font-size: 40px;
 }
 
@@ -602,13 +649,15 @@
   text-align: center;
 }
 .banner-sub > .title {
-  font-size: 48px;
-  line-height: 58px;
+  font-size: 46px;
+  line-height: 1.4em;
+  letter-spacing: 0;
   margin-bottom: 50px;
 }
 .banner-sub > .desc {
   font-size: 18px;
-  color: var(--grey200);
+  line-height: 1.5em;
+  color: var(--grey300);
 }
 
 /*# sourceMappingURL=index.css.map */

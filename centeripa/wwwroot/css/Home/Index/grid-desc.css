@@ -1,12 +1,10 @@
 /* Error: Undefined mixin.
  *    ,
- * 10 | /     @include mobile {
- * 11 | |         grid-template-columns: 1fr;
- * 12 | |         grid-template-rows: auto;
- * 13 | |         padding: 20px 0 20px 0;
- * 14 | \     }
+ * 9  | /     @include tablet {
+ * 10 | |         padding: 50px 20px 50px 20px;
+ * 11 | \     }
  *    '
- *   scss/Home/Index/grid-desc.scss 10:5  root stylesheet */
+ *   scss/Home/Index/grid-desc.scss 9:5  root stylesheet */
 
 body::before {
   font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
@@ -16,5 +14,5 @@ body::before {
   padding: 1em;
   margin-bottom: 1em;
   border-bottom: 2px solid black;
-  content: "Error: Undefined mixin.\a    \2577 \a 10 \2502  \250c      @include mobile {\a 11 \2502  \2502          grid-template-columns: 1fr;\a 12 \2502  \2502          grid-template-rows: auto;\a 13 \2502  \2502          padding: 20px 0 20px 0;\a 14 \2502  \2514      }\a    \2575 \a   scss/Home/Index/grid-desc.scss 10:5  root stylesheet";
+  content: "Error: Undefined mixin.\a    \2577 \a 9  \2502  \250c      @include tablet {\a 10 \2502  \2502          padding: 50px 20px 50px 20px;\a 11 \2502  \2514      }\a    \2575 \a   scss/Home/Index/grid-desc.scss 9:5  root stylesheet";
 }

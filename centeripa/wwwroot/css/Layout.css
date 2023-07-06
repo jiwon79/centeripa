@@ -46,7 +46,7 @@
   .dropdown {
     display: flex;
     width: 130px;
-    font-size: 12px;
+    font-size: 14px;
     line-height: 14px;
   }
   .menu {
@@ -244,9 +244,8 @@
   background-color: var(--main700);
   color: var(--grey100);
   display: flex;
-  height: 400px;
   justify-content: space-between;
-  padding: 60px 100px 60px 100px;
+  padding: 60px 120px 60px 120px;
 }
 
 .footer p {
@@ -261,21 +260,24 @@
 }
 
 .brand-text__wrap > .brand-text {
+  font-family: "Questrial";
   line-height: 1.2em;
-  font-size: 36px;
+  letter-spacing: 0;
+  font-size: 40px;
 }
 .brand-text__wrap > .brand-text > span {
   color: var(--main400);
 }
 .brand-text__wrap > .brand-text__sub {
-  font-family: "Questrial", sans-serif;
-  font-size: 16px;
+  font-family: "Avenir", sans-serif;
+  font-size: 11px;
   color: var(--grey300);
 }
 
 .brand-desc__warp > .brand-desc {
-  font-size: 26px;
-  line-height: 28px;
+  font-size: 28px;
+  line-height: 1.2em;
+  letter-spacing: 0;
   margin-bottom: 20px;
 }
 .brand-desc__warp > .link {
@@ -283,15 +285,17 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid white;
+  border: 2px solid #68C6B5;
   width: 120px;
   height: 40px;
+  border-radius: 100px;
   transition: 0.5s;
 }
 .brand-desc__warp > .link > span {
-  font-size: 18px;
-  line-height: 1.2em;
-  color: white;
+  font-size: 16px;
+  line-height: 1;
+  letter-spacing: 0;
+  color: #68C6B5;
 }
 .brand-desc__warp > .link:hover {
   background-color: var(--main400);
@@ -301,12 +305,21 @@
 .info__wrap {
   margin-right: 200px;
 }
+@media (min-width: 769px) and (max-width: 1023px) {
+  .info__wrap {
+    margin-right: 40px;
+  }
+}
 .info__wrap > .title {
   font-size: 18px;
+  line-height: 1.5em;
+  letter-spacing: 0;
   color: var(--main400);
 }
 .info__wrap > .desc {
+  font-family: "Avenir";
   font-size: 14px;
+  line-height: 1.8em;
   color: var(--grey300);
 }
 .info__wrap > .desc.last {
@@ -317,6 +330,25 @@
   font-size: 14px;
   margin-bottom: 4px;
   color: var(--grey300);
+}
+
+.fotter__bottom {
+  width: 100%;
+  padding: 6px 40px 6px 40px;
+  display: flex;
+  background-color: #FFFFFF;
+}
+.fotter__bottom p {
+  font-family: "Avenir";
+  font-size: 12px;
+  letter-spacing: 0;
+}
+.fotter__bottom a {
+  font-family: "Avenir";
+  font-size: 12px;
+  letter-spacing: 0;
+  margin-left: 30px;
+  color: #191919;
 }
 
 /*# sourceMappingURL=Layout.css.map */

@@ -1,5 +1,11 @@
 @{
-    ViewData["Title"] = "이상회 및 협력 보험사";
+    ViewData["Title"] = "이사회 및 협력 보험사";
+    List<dynamic> list = new List<dynamic>();
+    list.Add(new { title = "CEO", name = "Chris Lee, M.D. | 이익준", history = "약력 설명", image = "1" });
+    list.Add(new { title = "CEO", name = "Joseph Park, M.D. | 박항", history = "약력 설명", image = "2" });
+    list.Add(new { title = "CEO", name = "Woosung Ahn, M.D. | 안우성", history = "약력 설명", image = "1" });
+    list.Add(new { title = "CEO", name = "Yenny, M.D. | 김예은", history = "약력 설명", image = "1" });
+    list.Add(new { title = "CEO", name = "KimKim, M.D. | 김예은", history = "약력 설명", image = "1" });
 }
 
 @section Styles {
@@ -7,5 +13,21 @@
 }
 
 <div class="wrapper">
-    
+    @foreach (var item in list)
+    {
+        <div class="item">
+            <div class="image">
+                <img src= />
+            </div>
+            <div class="title">
+                @item.title
+            </div>
+            <div class="name">
+                @item.name
+            </div>
+            <div class="history">
+                @item.history
+            </div>
+        </div>        
+    }
 </div>
