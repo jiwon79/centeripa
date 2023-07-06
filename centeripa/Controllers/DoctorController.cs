@@ -19,6 +19,16 @@ namespace centeripa
         {
             return View();
         }
+
+        public IActionResult Primary()
+        {
+            return View();
+        }
+
+        public IActionResult Ancillary()
+        {
+            return View();
+        }
     }
 }
 
