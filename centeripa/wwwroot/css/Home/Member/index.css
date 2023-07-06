@@ -14,4 +14,65 @@
   black: #000000;
 }
 
+.wrapper {
+  display: 100%;
+}
+
+.section_1 {
+  padding: 20px 100px 20px 100px;
+}
+.section_1 > .title {
+  font-size: 38px;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 20px;
+}
+@media (min-width: 769px) and (max-width: 1023px) {
+  .section_1 {
+    padding: 20px 40px 20px 40px;
+  }
+}
+
+.member__wrap {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, max-content));
+  grid-gap: 16px;
+  justify-content: center;
+  padding: initial;
+}
+.member__wrap > .item {
+  background-image: radial-gradient(circle at 94.3538411458% 89.6158854167%, #C7ECE5 0%, 20%, rgba(199, 236, 229, 0) 40%), radial-gradient(circle at 6.50390625% 88.037109375%, rgba(104, 198, 181, 0.99) 0%, 25%, rgba(104, 198, 181, 0) 50%), radial-gradient(circle at 21.6666666667% 32.5%, #FFFFFF 0%, 24.84%, rgba(255, 255, 255, 0) 54%), radial-gradient(circle at 93.6865234375% 11.42578125%, #E4FFBA 0%, 42%, rgba(228, 255, 186, 0) 70%), radial-gradient(circle at 48.9013671875% 49.521484375%, #A5D9D0 0%, 100%, rgba(165, 217, 208, 0) 100%);
+  width: 200px;
+  margin: 10px 10px 10px 10px;
+  padding: 0 20px 20px 20px;
+  display: flex;
+  flex-direction: column;
+}
+.member__wrap .image {
+  width: 200px;
+  height: 150px;
+  align-self: center;
+}
+.member__wrap .image > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.member__wrap .title {
+  margin-top: 10px;
+  font-size: 12px;
+  color: #FFFFFF;
+}
+.member__wrap .name {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+.member__wrap .history {
+  color: #303030;
+  font-size: 12px;
+  letter-spacing: 0;
+  line-height: 1.5em;
+}
+
 /*# sourceMappingURL=index.css.map */

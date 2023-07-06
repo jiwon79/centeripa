@@ -6,6 +6,9 @@
     list.Add(new { title = "CEO", name = "Woosung Ahn, M.D. | 안우성", history = "약력 설명", image = "1" });
     list.Add(new { title = "CEO", name = "Yenny, M.D. | 김예은", history = "약력 설명", image = "1" });
     list.Add(new { title = "CEO", name = "KimKim, M.D. | 김예은", history = "약력 설명", image = "1" });
+
+    String imagePath = "/asset/images/members/img_member_";
+    String imageExt = ".webp";
 }
 
 @section Styles {
@@ -13,21 +16,29 @@
 }
 
 <div class="wrapper">
-    @foreach (var item in list)
-    {
-        <div class="item">
-            <div class="image">
-                <img src= />
-            </div>
-            <div class="title">
-                @item.title
-            </div>
-            <div class="name">
-                @item.name
-            </div>
-            <div class="history">
-                @item.history
-            </div>
-        </div>        
-    }
+    <div class="section_1">
+        <p class="title">이사회 구성원</p>
+
+        <div class="member__wrap">
+            @foreach (var item in list)
+            {
+                <div class="item">
+                    <div class="image">
+                        <img src="@imagePath@(item.image)@imageExt" />
+                    </div>
+                    <p class="title">@item.title</p>
+                    <p class="name">@item.name</p>
+                    <p class="history">@item.history</p>
+                </div>        
+            }
+        </div>
+    </div>
+
+    <div class="section_2">
+        <p class="title">협력 보험사</p>
+        <p class="sub-title">
+            아래 메디케어 보험사들은 센터메디컬그룹과 계약되어 있습니다.
+        </p>
+
+    </div>
 </div>
