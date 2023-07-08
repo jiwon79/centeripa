@@ -32,3 +32,7 @@ namespace centeripa
     }
 }
 
+class Doctor {
+    public string name;
+    public string place;
+}
