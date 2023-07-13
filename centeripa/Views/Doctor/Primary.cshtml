@@ -1,7 +1,13 @@
-@{
-    
-}
+@using centeripa.Models;
+@model IEnumerable<DoctorModel>
 
 <h1>
     Primary
 </h1>
+
+<div>
+    @foreach (DoctorModel data in Model)
+    {
+        @await Component.InvokeAsync("Doctor", new { doctor = data })
+    }
+</div>
