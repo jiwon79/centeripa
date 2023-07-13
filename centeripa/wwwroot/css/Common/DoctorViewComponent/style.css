@@ -1,0 +1,20 @@
+.doctorViewComponent {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #000;
+}
+.doctorViewComponent > .wrapper-top {
+  display: flex;
+}
+.doctorViewComponent .image {
+  width: 80px;
+  height: 80px;
+  background-color: antiquewhite;
+  margin-right: 20px;
+}
+.doctorViewComponent .name {
+  word-break: keep-all;
+}
+
+/*# sourceMappingURL=style.css.map */

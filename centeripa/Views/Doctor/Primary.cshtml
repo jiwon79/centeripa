@@ -1,11 +1,15 @@
 @using centeripa.Models;
 @model IEnumerable<DoctorModel>
+@section Styles {
+    <link rel="stylesheet" href="~/css/Common/DoctorViewComponent/style.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/Doctor/common.css" asp-append-version="true" />
+}
 
 <h1>
     Primary
 </h1>
 
-<div>
+<div class="doctorViewComponent-wrapper">
     @foreach (DoctorModel data in Model)
     {
         @await Component.InvokeAsync("Doctor", new { doctor = data })

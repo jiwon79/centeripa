@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":[],"names":[],"mappings":"","file":"common.css"}
+{"version":3,"sourceRoot":"","sources":["../../scss/Doctor/common.scss"],"names":[],"mappings":"AAAA;EACI;EACA;EACA","file":"common.css"}

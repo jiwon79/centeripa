@@ -1,3 +1,7 @@
-
+.doctorViewComponent-wrapper {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr 1fr 1fr;
+}
 
 /*# sourceMappingURL=common.css.map */

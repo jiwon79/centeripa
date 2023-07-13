@@ -1,10 +1,15 @@
 @using centeripa.Models
 @model DoctorModel
-<div>
-    <p>@Model.name</p>
-    <p>@Model.address</p>
-    <p>@Model.city</p>
-    <p>@Model.specialist</p>
-    <p>@Model.phone</p>
-    <p>@Model.fax</p>
+<div class="doctorViewComponent">
+    <div class="wrapper-top">
+        <div class="image"></div>
+        <p class="name">@Model.name</p>
+    </div>
+    <div>
+        <p class="speciality">@Model.speciality</p>
+        <p class="address">@Model.address</p>
+        <p class="city">@Model.city</p>
+        <p class="phone">@Model.phone</p>
+        <p class="fax">@Model.fax</p>
+    </div>
 </div>

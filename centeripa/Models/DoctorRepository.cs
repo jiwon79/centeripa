@@ -12,10 +12,10 @@ namespace centeripa.Models {
             /// </summary>
             private readonly List<DoctorModel> sourceList = new List<DoctorModel>()
             {
-                new DoctorModel { name = "CHEN AHN H, L.AC / 중앙 한의원", specialist = "ACUPUNCTURE / 한의과", address = "2140 W OLYMPIC BLVD, STE 200", city = "LOS ANGELES, CA 90006", phone = "(213) 383-3355", fax = "(855) 326-3041" },
-                new DoctorModel { name = "CHEN AHN H, L.AC / 중앙 한의원", specialist = "ACUPUNCTURE / 한의과", address = "2140 W OLYMPIC BLVD, STE 200", city = "LOS ANGELES, CA 90006", phone = "(213) 383-3355", fax = "(855) 326-3041" },
-                new DoctorModel { name = "CHEN AHN H, L.AC / 중앙 한의원", specialist = "ACUPUNCTURE / 한의과", address = "2140 W OLYMPIC BLVD, STE 200", city = "LOS ANGELES, CA 90006", phone = "(213) 383-3355", fax = "(855) 326-3041" },
-                new DoctorModel { name = "CHEN AHN H, L.AC / 중앙 한의원", specialist = "ACUPUNCTURE / 한의과", address = "2140 W OLYMPIC BLVD, STE 200", city = "LOS ANGELES, CA 90006", phone = "(213) 383-3355", fax = "(855) 326-3041" },
+                new DoctorModel { name = "CHEN AHN H, L.AC / 중앙 한의원", speciality = "ACUPUNCTURE / 한의과", address = "2140 W OLYMPIC BLVD, STE 200", city = "LOS ANGELES, CA 90006", phone = "(213) 383-3355", fax = "(855) 326-3041" },
+                new DoctorModel { name = "CHEN AHN H, L.AC / 중앙 한의원", speciality = "ACUPUNCTURE / 한의과", address = "2140 W OLYMPIC BLVD, STE 200", city = "LOS ANGELES, CA 90006", phone = "(213) 383-3355", fax = "(855) 326-3041" },
+                new DoctorModel { name = "CHEN AHN H, L.AC / 중앙 한의원", speciality = "ACUPUNCTURE / 한의과", address = "2140 W OLYMPIC BLVD, STE 200", city = "LOS ANGELES, CA 90006", phone = "(213) 383-3355", fax = "(855) 326-3041" },
+                new DoctorModel { name = "CHEN AHN H, L.AC / 중앙 한의원", speciality = "ACUPUNCTURE / 한의과", address = "2140 W OLYMPIC BLVD, STE 200", city = "LOS ANGELES, CA 90006", phone = "(213) 383-3355", fax = "(855) 326-3041" },
             };
 
             #endregion
