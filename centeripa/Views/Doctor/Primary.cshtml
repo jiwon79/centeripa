@@ -4,13 +4,17 @@
     <link rel="stylesheet" href="~/css/Common/DoctorViewComponent/style.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/Doctor/common.css" asp-append-version="true" />
 }
+@{
+    var models = Model;
+    @* var filter = []; *@
+}
 
 <h1>
     Primary
 </h1>
 
 <div class="doctorViewComponent-wrapper">
-    @foreach (DoctorModel data in Model)
+    @foreach (DoctorModel data in models)
     {
         @await Component.InvokeAsync("Doctor", new { doctor = data })
     }
